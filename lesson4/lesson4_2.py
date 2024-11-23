@@ -17,4 +17,4 @@ if __name__ == '__main__':
     main()
 
 from widget import aaa
-aaa.PI
+print(aaa.PI)
