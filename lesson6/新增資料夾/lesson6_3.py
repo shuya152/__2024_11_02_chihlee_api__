@@ -2,8 +2,8 @@ from pprint import pprint
 import tools
 
 def main():
-    data:list[dict] = tools.get_aqi(excel_name='aqi.xlsx')
-    pprint(data)
+    sitenames:list[str] = tools.get_sitenames(excel_name='aqi.xlsx')
+    print(sitenames)
 
 if __name__ == '__main__':
     main()
