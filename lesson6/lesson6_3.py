@@ -14,7 +14,16 @@ def get_aqi(excel_name:str) -> list[dict]:
 
 def main():
     data:list[dict] = get_aqi(excel_name='aqi.xlsx')
-    pprint(data)
+    sitenames:list = []
+    # pprint(data)
+    for item in data:
+        sitenames.append(item['sitename'])
+
+    sitenames = list(set(sitenames))
+    print(len(sitenames))
+    for name in sitenames:
+        print( name )
+
 
 
 if __name__ == '__main__':
