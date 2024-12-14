@@ -1,21 +1,7 @@
-import requests
-from requests import Response
-from requests.exceptions import RequestException,HTTPError
-from io import StringIO
-from csv import DictReader
-
-url = 'https://data.ntpc.gov.tw/api/datasets/010e5b15-3823-4b20-b401-b1cf000550c5/csv?page=0&size=1000'
-
+import tools
 try:
-    r:Response = requests.request('GET',url)
-    r.raise_for_status()   
-except HTTPError as e:
-    print(e)
-except RequestException as e:
+    youbike_data:list[dict]=tools.get_youbikes()
+except Exception as e:
     print(e)
 else:
-    print("下載成功")
-    file = StringIO(r.text)
-    reader = DictReader(file)
-    list_reader:list[dict] = list(reader)
-    print(list_reader)
+    print(youbike_data)
