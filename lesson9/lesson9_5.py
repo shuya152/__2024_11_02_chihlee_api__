@@ -1,5 +1,7 @@
 # https://streamlit.io/components
 # https://streamlit.io/components?category=widgets
+# https://streamlit.io/components?category=llms
+# https://github.com/roberthsu2003/pythonStreamlit?tab=readme-ov-file
 
 import streamlit as st
 from streamlit_clickable_images import clickable_images
